@@ -1,0 +1,32 @@
+---
+title: "R Markdown and Leaflet"
+author: "Antonio Avella"
+date: "September 6 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+We create a web page using R Markdown that features a map created with Leaflet 
+and host our webpage on either GitHub Pages.
+
+Our webpage must contain the date that we created the document, and it must contain a map created with Leaflet.
+
+### The code of the map
+
+```{r}
+
+
+library(leaflet)
+my_map <- leaflet() %>% addTiles() %>%
+        addMarkers(lat=-34.6922349, lng=-58.328331, 
+             popup="My favorite park")
+my_map
+
+
+
+
+```
